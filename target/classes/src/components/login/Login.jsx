@@ -45,20 +45,19 @@ class Login extends React.Component {
 
   render() {
     return (
-      <Grid container>
-        <Grid item xs={7}>
-          <img className="image" alt="foodImage" src='https://i.pinimg.com/originals/b4/09/33/b40933bf361ec47c1835cae89398275d.jpg' />
-        </Grid>
-        <Grid item xs={5}>
-          <div className="container">
-            <FastfoodIcon className="icon"/>
+      <Grid container justify={"center"}>
+        {/*<Grid item xs={7}>*/}
+        {/*  <img className="image" alt="foodImage" src='https://files.pitchbook.com/website/files/jpg/food_delivery_800.jpg' />*/}
+        {/*</Grid>*/}
+        <Grid item  xs={"auto"}>
+          <div className="container" >
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
             <Typography variant="body1" color="error">
               {this.state.loginFailed}
             </Typography>
-            <form onSubmit={this.loginUser}>
+            <form onSubmit={this.loginUser} >
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -103,9 +102,8 @@ class Login extends React.Component {
               </Link>
               <Box mt={5}>
                 <Typography variant="body2" color="textSecondary" align="center">
-                  {/*{'Copyright © NEUEat '}*/}
-                  {/*{new Date().getFullYear()}*/}
-                  {'.'}
+
+
                 </Typography>
               </Box>
             </form>

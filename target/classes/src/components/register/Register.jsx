@@ -77,9 +77,9 @@ class Register extends React.Component {
   render() {
     return (
       <Grid container justify="center">
-        <Grid item xs={6}>
+        <Grid item xs={"auto"}>
           <div className="container">
-            <FastfoodIcon className="icon"/>
+
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
@@ -192,13 +192,7 @@ class Register extends React.Component {
               <Link to={"/login"} className="link">
                 Already have an account? Sign In
               </Link>
-              <Box mt={5}>
-                <Typography variant="body2" color="textSecondary" align="center">
-                  {'Copyright © NEUEat '}
-                  {new Date().getFullYear()}
-                  {'.'}
-                </Typography>
-              </Box>
+
             </form>
           </div>
         </Grid>
