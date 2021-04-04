@@ -10,7 +10,7 @@ const axios = require('axios').default;
 const theme = createMuiTheme({
   palette: {
     secondary: {
-      main: '#ef5350'
+      main: '#61637f'
     }
   },
 });
@@ -56,7 +56,7 @@ class Topbar extends React.Component {
             >
               <Grid item>
                 <Typography variant="h5" color="inherit">
-                  Hi {this.props.currentUser.userName}
+                  Welcome {this.props.currentUser.userName}!
                 </Typography>
               </Grid>
               <Grid item>
@@ -65,7 +65,7 @@ class Topbar extends React.Component {
               <Grid item>
                 <UserMenu currentUser={this.props.currentUser} logoutUser={this.logoutUser} />
               </Grid>
-            </Grid>) : (<Typography variant="h4"><i><b>Please login</b></i></Typography>)}
+            </Grid>) : (<Typography variant="h5"><i><b>Welcome to the website</b></i></Typography>)}
           </Toolbar>
         </AppBar>
       </MuiThemeProvider>

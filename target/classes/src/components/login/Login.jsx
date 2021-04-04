@@ -45,20 +45,29 @@ class Login extends React.Component {
 
   render() {
     return (
-      <Grid container>
-        <Grid item xs={7}>
-          <img className="image" alt="foodImage" src='https://i.pinimg.com/originals/b4/09/33/b40933bf361ec47c1835cae89398275d.jpg' />
-        </Grid>
-        <Grid item xs={5}>
-          <div className="container">
-            <FastfoodIcon className="icon"/>
+
+      <Grid container justify={"center"}
+      //       style={{
+      //   minHeight:"100%",
+      //   backgroundImage: `url("https://files.pitchbook.com/website/files/jpg/food_delivery_800.jpg")`,
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundAttachment: "fixed",
+      //   backgroundPosition: "center",
+      //   backgroundSize: "cover"
+      // }}
+      >
+        {/*<Grid item xs={7}>*/}
+        {/*  <img className="image" alt="foodImage" src='https://files.pitchbook.com/website/files/jpg/food_delivery_800.jpg' />*/}
+        {/*</Grid>*/}
+        <Grid item  xs={"auto"} >
+          <div className="container"  >
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
             <Typography variant="body1" color="error">
               {this.state.loginFailed}
             </Typography>
-            <form onSubmit={this.loginUser}>
+            <form onSubmit={this.loginUser} >
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -81,7 +90,7 @@ class Login extends React.Component {
                 onChange={event => this.handleChange({password: event.target.value})}
               />
               <FormControl component="fieldset">
-                <FormLabel component="legend">Login as a </FormLabel>
+                <FormLabel component="legend">Login as</FormLabel>
                 <RadioGroup row aria-label="UserType" name="userType" value={this.state.userType} onChange={event => this.handleChange({userType: event.target.value})}>
                   <FormControlLabel value="customer" control={<Radio />} label="Customer" />
                   <FormControlLabel value="driver" control={<Radio />} label="Driver" />
@@ -101,13 +110,12 @@ class Login extends React.Component {
               <Link to={"/register"} className="link">
                 Don't have an account? Sign Up
               </Link>
-              <Box mt={5}>
-                <Typography variant="body2" color="textSecondary" align="center">
-                  {/*{'Copyright © NEUEat '}*/}
-                  {/*{new Date().getFullYear()}*/}
-                  {'.'}
-                </Typography>
-              </Box>
+              <br/>
+              <br/>
+              <h4>
+              Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
+              informational and educational purposes only and is not a substitute for professional advice.</h4>
+
             </form>
           </div>
         </Grid>
