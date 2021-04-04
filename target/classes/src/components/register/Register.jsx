@@ -190,7 +190,7 @@ class Register extends React.Component {
               <br/>
               <br/>
               <Link to={"/login"} className="link">
-                Already have an account? Sign In
+                Already have an account? Sign In Please
               </Link>
 
             </form>
