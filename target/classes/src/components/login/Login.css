@@ -20,10 +20,10 @@
 .link:hover {
   color: #00008B;
 }
-.body {
-  min-width: auto;
-  background-image: url("https://files.pitchbook.com/website/files/jpg/food_delivery_800.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+/*.body {*/
+/*  min-width: auto;*/
+/*  background-image: url("https://files.pitchbook.com/website/files/jpg/food_delivery_800.jpg");*/
+/*  background-repeat: no-repeat;*/
+/*  background-attachment: fixed;*/
+/*  background-size: cover;*/
+/*}*/
