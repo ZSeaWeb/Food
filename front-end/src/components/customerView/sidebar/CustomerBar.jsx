@@ -6,42 +6,68 @@ import {
   ListItemText,
   Divider
 }
-from '@material-ui/core';
+  from '@material-ui/core';
 
 class CustomerBar extends React.Component {
   render() {
     return (
-      <div>
-        <br />
-        <h3><b><i>test change ToolBar</i></b></h3>
-        <br />
-        <List component="nav">
-          <Link to={"/customer/home"} className="link">
-            <ListItem>
-              <ListItemText primary={"Home Page"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/customer/cart"} className="link">
-            <ListItem>
-              <ListItemText primary={"My Shopping Cart"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/customer/orders"} className="link">
-            <ListItem>
-              <ListItemText primary={"My Active Orders"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/customer/history"} className="link">
-            <ListItem>
-              <ListItemText primary={"My Order History"} />
-            </ListItem>
-            <Divider />
-          </Link>
-        </List>
-      </div>
+        <div>
+          <br />
+          <h3><b>ToolBar</b></h3>
+          <br />
+          {/*<List component="nav">*/}
+          {/*  <Link to={"/customer/home"} className="link">*/}
+          {/*    <ListItem>*/}
+          {/*      <ListItemText primary={"Home Page"} />*/}
+          {/*    </ListItem>*/}
+          {/*    <Divider />*/}
+          {/*  </Link>*/}
+          {/*  <Link to={"/customer/cart"} className="link">*/}
+          {/*    <ListItem>*/}
+          {/*      <ListItemText primary={"My Shopping Cart"} />*/}
+          {/*    </ListItem>*/}
+          {/*    <Divider />*/}
+          {/*  </Link>*/}
+          {/*  <Link to={"/customer/orders"} className="link">*/}
+          {/*    <ListItem>*/}
+          {/*      <ListItemText primary={"My Active Orders"} />*/}
+          {/*    </ListItem>*/}
+          {/*    <Divider />*/}
+          {/*  </Link>*/}
+          {/*  <Link to={"/customer/history"} className="link">*/}
+          {/*    <ListItem>*/}
+          {/*      <ListItemText primary={"My Order History"} />*/}
+          {/*    </ListItem>*/}
+          {/*    <Divider />*/}
+          {/*  </Link>*/}
+          {/*</List>*/}
+          <List component="nav" aria-label="contacts">
+            <Link to={"/customer/home"} className="link">
+              <ListItem button>
+                <ListItemText primary={"Home Page"} />
+              </ListItem>
+              {/*<Divider />*/}
+            </Link>
+            <Link to={"/customer/cart"} className="link">
+              <ListItem button>
+                <ListItemText primary={"My Shopping Cart"} />
+              </ListItem>
+              {/*<Divider />*/}
+            </Link>
+            <Link to={"/customer/orders"} className="link">
+              <ListItem button>
+                <ListItemText primary={"My Active Orders"} />
+              </ListItem>
+              {/*<Divider />*/}
+            </Link>
+            <Link to={"/customer/history"} className="link">
+              <ListItem button>
+                <ListItemText primary={"My Order History"} />
+              </ListItem>
+              {/*<Divider />*/}
+            </Link>
+          </List>
+        </div>
     );
   }
 }

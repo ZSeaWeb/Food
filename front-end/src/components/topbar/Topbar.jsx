@@ -10,7 +10,7 @@ const axios = require('axios').default;
 const theme = createMuiTheme({
   palette: {
     secondary: {
-      main: '#ef5350'
+      main: '#20b2aa'
     }
   },
 });
@@ -45,7 +45,7 @@ class Topbar extends React.Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <AppBar className="topbar" position="absolute" color="secondary">
+        <AppBar className="topbar" position="absolute" >
           <Toolbar>
             {this.props.currentUser ?
             (<Grid
