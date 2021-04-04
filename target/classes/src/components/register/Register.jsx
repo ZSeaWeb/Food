@@ -179,20 +179,24 @@ class Register extends React.Component {
                   <FormControlLabel value="restaurant" control={<Radio />} label="Restaurant" />
                 </RadioGroup>
               </FormControl>
+              <br/>
+              <br/>
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
-                color="primary"
+                color="secondary"
               >
-                Sign Up
+                Create your account
               </Button>
               <br/>
+              or
               <br/>
               <Link to={"/login"} className="link">
-                Already have an account? Sign In Please
+                <h3>Have an account? Sign In</h3>
               </Link>
-
+              <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
+                informational and educational purposes only and is not a substitute for professional advice.</h4>
             </form>
           </div>
         </Grid>
