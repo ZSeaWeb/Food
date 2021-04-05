@@ -19,10 +19,10 @@ class RestaurantView extends React.Component {
     return this.props.currentUser ? (
       <Router>
         <Grid container justify="flex-start">
-          <Grid item sm={3}>
+          <Grid item sm={12}>
             <RestaurantBar />
           </Grid>
-          <Grid item sm={9}>
+          <Grid item sm={12}>
             <div className="grid-item">
               <Switch>
                 <Route path="/restaurant/home" render={props => <RestaurantHome {...props} currentUser={this.props.currentUser} />} />

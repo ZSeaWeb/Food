@@ -27,11 +27,11 @@ class RestaurantHome extends React.Component {
   render() {
     return this.state.restaurant ? (
       <div>
-        <Typography paragraph variant="h5">Welcome to the <i><b>TO BE DETERMINED</b></i> !</Typography>
-        <Typography paragraph>If you are a new user, please provide your restaurant information and menu using the links in sidebar</Typography>
-        <Typography paragraph>Once you finish them, your restaurant will be visible to the customers</Typography>
-        <Typography paragraph>To be noticed, you can always update them</Typography>
-        <Typography paragraph>Enjoy!!!</Typography>
+        <Typography paragraph variant="h2">Welcome to the <i><b>NEUEat</b></i> !</Typography>
+        <Typography paragraph>For new users, please provide your restaurant information and menu using the links in Restaurant Info Session</Typography>
+        {/*<Typography paragraph>Once you finish them, your restaurant will be visible to the customers</Typography>*/}
+        {/*<Typography paragraph>To be noticed, you can always update them</Typography>*/}
+        <Typography paragraph>Enjoy!</Typography>
         <Divider />
         <br />
         <div>Restaurant Information status : 
