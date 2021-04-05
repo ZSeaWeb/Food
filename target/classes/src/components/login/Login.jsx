@@ -62,7 +62,7 @@ class Login extends React.Component {
         <Grid item  xs={"auto"} >
           <div className="container"  >
             <Typography component="h1" variant="h5">
-              Sign in
+              Sign in with your account
             </Typography>
             <Typography variant="body1" color="error">
               {this.state.loginFailed}
@@ -92,28 +92,35 @@ class Login extends React.Component {
               <FormControl component="fieldset">
                 <FormLabel component="legend">Login as</FormLabel>
                 <RadioGroup row aria-label="UserType" name="userType" value={this.state.userType} onChange={event => this.handleChange({userType: event.target.value})}>
-                  <FormControlLabel value="customer" control={<Radio />} label="Customer" />
+                  <FormControlLabel value="customer" control={<Radio />} label="Customer" color="primary" />
                   <FormControlLabel value="driver" control={<Radio />} label="Driver" />
                   <FormControlLabel value="restaurant" control={<Radio />} label="Restaurant" />
                 </RadioGroup>
               </FormControl>
+              <br/>
+              <br/>
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
-                color="primary"
+                color="secondary"
               >
                 Sign In
               </Button>
               <br/>
               <br/>
+              {/*<Link to={"/#"} className={"link"}>*/}
+              {/* Don't want to sign in or sign up? GUEST BROWSING MODE*/}
+              {/*</Link>*/}
+              or
+              <br/>
+
               <Link to={"/register"} className="link">
-                Don't have an account? Sign Up
+                <h3>Create Your Account</h3>
               </Link>
               <br/>
               <br/>
-              <h4>
-              Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
+              <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
               informational and educational purposes only and is not a substitute for professional advice.</h4>
 
             </form>
