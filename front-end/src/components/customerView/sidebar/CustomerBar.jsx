@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import {
-  List,
-  ListItem,
-  ListItemText,
-  Divider
+    AppBar,
+    Tabs,
+    Tab
 }
   from '@material-ui/core';
 
@@ -15,58 +14,22 @@ class CustomerBar extends React.Component {
           <br />
           <h3><b>ToolBar</b></h3>
           <br />
-          {/*<List component="nav">*/}
-          {/*  <Link to={"/customer/home"} className="link">*/}
-          {/*    <ListItem>*/}
-          {/*      <ListItemText primary={"Home Page"} />*/}
-          {/*    </ListItem>*/}
-          {/*    <Divider />*/}
-          {/*  </Link>*/}
-          {/*  <Link to={"/customer/cart"} className="link">*/}
-          {/*    <ListItem>*/}
-          {/*      <ListItemText primary={"My Shopping Cart"} />*/}
-          {/*    </ListItem>*/}
-          {/*    <Divider />*/}
-          {/*  </Link>*/}
-          {/*  <Link to={"/customer/orders"} className="link">*/}
-          {/*    <ListItem>*/}
-          {/*      <ListItemText primary={"My Active Orders"} />*/}
-          {/*    </ListItem>*/}
-          {/*    <Divider />*/}
-          {/*  </Link>*/}
-          {/*  <Link to={"/customer/history"} className="link">*/}
-          {/*    <ListItem>*/}
-          {/*      <ListItemText primary={"My Order History"} />*/}
-          {/*    </ListItem>*/}
-          {/*    <Divider />*/}
-          {/*  </Link>*/}
-          {/*</List>*/}
-          <List component="nav" aria-label="contacts">
-            <Link to={"/customer/home"} className="link">
-              <ListItem button>
-                <ListItemText primary={"Home Page"} />
-              </ListItem>
-              {/*<Divider />*/}
-            </Link>
-            <Link to={"/customer/cart"} className="link">
-              <ListItem button>
-                <ListItemText primary={"My Shopping Cart"} />
-              </ListItem>
-              {/*<Divider />*/}
-            </Link>
-            <Link to={"/customer/orders"} className="link">
-              <ListItem button>
-                <ListItemText primary={"My Active Orders"} />
-              </ListItem>
-              {/*<Divider />*/}
-            </Link>
-            <Link to={"/customer/history"} className="link">
-              <ListItem button>
-                <ListItemText primary={"My Order History"} />
-              </ListItem>
-              {/*<Divider />*/}
-            </Link>
-          </List>
+          <AppBar position="static">
+            <Tabs value="value" onChange={() => {}} aria-label="simple tabs example" centered>
+              <Link to={"/customer/home"} className="link">
+                <Tab label="Home Page"/>
+              </Link>
+              <Link to={"/customer/cart"} className="link">
+                  <Tab label="My Shopping Cart"/>
+              </Link>
+              <Link to={"/customer/orders"} className="link">
+                  <Tab label="My Active Orders"/>
+              </Link>
+              <Link to={"/customer/history"} className="link">
+                  <Tab label="My Order History"/>
+              </Link>
+            </Tabs>
+          </AppBar>
         </div>
     );
   }
