@@ -177,9 +177,8 @@ class OrderCard extends React.Component {
             {this.props.userType === "customer" ? 
               <Link to={"/customer/restaurant/" + this.state.restaurant.id}>
                 <img className="orderCardImage" src= {this.state.restaurant.information.imageUrl} alt={this.state.restaurant.information.restaurantName} />
-              </Link> : null
+              </Link> : <img className="orderCardImage" src= {this.state.restaurant.information.imageUrl} alt={this.state.restaurant.information.restaurantName} />
             }
-            <img className="orderCardImage" src= {this.state.restaurant.information.imageUrl} alt={this.state.restaurant.information.restaurantName} />
             <i><b>Order from {this.state.restaurant.information.restaurantName}</b></i>
             {this.props.userType === "customer" && !this.props.order.delivery ? (
               <IconButton size="small" style={{position : "absolute", right : "0"}} onClick={this.deleteOrder}>

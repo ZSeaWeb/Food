@@ -63,21 +63,21 @@ class RestaurantCard extends React.Component {
     return this.props.userId && this.props.restaurantId && this.props.restaurantInfo && this.state.comments ? (
       <Card>
         <CardHeader
-          style={{backgroundColor: "#FAFAD2", height: "40px"}}
+          style={{backgroundColor: "#91daf2", height: "40px"}}
           avatar={
-            <Avatar aria-label="recipe" style={{backgroundColor: "#FF4500"}}>
+            <Avatar aria-label="recipe" style={{backgroundColor: "#62959c"}}>
               {this.props.restaurantInfo.restaurantName.substring(0, 1)}
             </Avatar>
           }
           action={
             this.props.restaurantInfo.open ? (<Typography color="primary">Open</Typography>) : <Typography color="secondary">Closed</Typography>}
-            titleTypographyProps={{variant:'h5'}}
+            titleTypographyProps={{variant:'h5', color:'textSecondary'}}
             title={this.props.restaurantInfo.restaurantName}
         />
         <Link to={"/customer/restaurant/" + this.props.restaurantId} className="link">
           <img className="photoCardImage" src= {this.props.restaurantInfo.imageUrl} alt={this.props.restaurantInfo.restaurantName} />
         </Link>
-        <CardContent style={{backgroundColor: "#e6f7ff"}}>
+        <CardContent style={{backgroundColor: "#dff0f5"}}>
           <Typography variant="body1" color="textSecondary" component="p">
             <i>{this.props.restaurantInfo.description}</i>
           </Typography>
@@ -85,6 +85,7 @@ class RestaurantCard extends React.Component {
       <IconButton
         onClick={this.handleExpandClick}
         aria-expanded={this.state.expanded}
+
       >
       <Typography><b>See Comments</b></Typography>
         <ExpandMoreIcon />
