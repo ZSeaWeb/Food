@@ -17,8 +17,12 @@ import {
       } from "@material-ui/core";
 import Rating from '@material-ui/lab/Rating';
 import DeleteIcon from '@material-ui/icons/Delete';
+import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
+import { spacing } from '@material-ui/system';
+// import Box from '@material-ui/core/Box';
 import "./Card.css";
 import MapCard from "./MapCard";
+import CardMedia from "@material-ui/core/CardMedia";
 const axios = require('axios').default;
 Geocode.setApiKey(process.env.REACT_APP_API_KEY);
 Geocode.setRegion("us");
@@ -168,52 +172,59 @@ class OrderCard extends React.Component {
   render() {
     return this.state.dict && this.state.restaurant && this.state.customer ? (
       <div>
-        <Card>
-          <Typography variant="body1" style={{position : "relative", backgroundColor: "#FAFAD2"}} >
+        <Card style={{backgroundColor: "#dff0f5"}}>
+          <Typography variant="body1" style={{position : "relative", backgroundColor: "#91daf2"}} >
             {this.props.userType === "customer" ? 
               <Link to={"/customer/restaurant/" + this.state.restaurant.id}>
                 <img className="orderCardImage" src= {this.state.restaurant.information.imageUrl} alt={this.state.restaurant.information.restaurantName} />
               </Link> : null
             }
+            <img className="orderCardImage" src= {this.state.restaurant.information.imageUrl} alt={this.state.restaurant.information.restaurantName} />
             <i><b>Order from {this.state.restaurant.information.restaurantName}</b></i>
             {this.props.userType === "customer" && !this.props.order.delivery ? (
               <IconButton size="small" style={{position : "absolute", right : "0"}} onClick={this.deleteOrder}>
                 <ClearIcon />
               </IconButton>
             ) : null}
+
           </Typography>
           <Divider />
-          <CardContent>
-            {Object.keys(this.state.dict).map(key => <Typography variant="body1" color="textSecondary" component="p" key={key}><i>{key}</i> ... x {this.state.dict[key]}</Typography>)}
+          <CardContent >
+            {Object.keys(this.state.dict).map(key => <Typography align="left" variant="body1" color="textSecondary" component="p" key={key}> <RadioButtonUncheckedIcon style={{ fontSize: 10}}/><i style={{margin: 10}}>{key}</i>  x {this.state.dict[key]}</Typography>)}
+            <Typography variant="body1" color="primary" align="right"><i>Subtotal : $ {this.props.order.price}</i></Typography>
             <Divider />
-            <br />
-            <Grid container direction="column" alignItems="flex-end" spacing={1}>
-              <Grid item xs={12}>
-                <Typography variant="body1" color="primary"><i>Subtotal : $ {this.props.order.price}</i></Typography>
-              </Grid>
+            {/*<br />*/}
+            <Grid container direction="column" alignItems="center" spacing={1}>
+              {/*<Grid item xs={12}>*/}
+              {/*  <Typography variant="body1" color="primary"><i>Subtotal : $ {this.props.order.price}</i></Typography>*/}
+              {/*</Grid>*/}
               {this.props.userType === "driver" && !this.props.order.delivery ? 
-                <Grid item xs={12}>
-                  <Button variant="outlined" color="secondary" size="small" onClick={this.acceptOrder}>
-                    Accept this order
-                  </Button>
+                <Grid item xs={12}  alignItems="center" >
+                  <Box mt={1}>
+                    <Button  variant="contained" color="primary" size="small" onClick={this.acceptOrder}>
+                      Accept
+                    </Button>
+                  </Box>
                 </Grid> : null
               }
               {this.props.userType === "driver" && this.props.order.delivery && this.props.order.endTime === null ?
                 <Grid item xs={12}>
-                  <Button variant="outlined" color="secondary" size="small" onClick={this.finishOrder}>
-                    Finish the order
+                  <Box mt={1}>
+                  <Button variant="contained" color="secondary" size="small" onClick={this.finishOrder}>
+                    Finish
                   </Button>
+                  </Box>
                 </Grid> : null
               }
             </Grid>
-            <br />
-            <Divider />
+            {/*<br />*/}
+            {/*<Divider />*/}
           </CardContent>
           <IconButton
             onClick={this.handleExpandClick}
             aria-expanded={this.state.expanded}
           >
-          <Typography><b>Check Order Status</b></Typography>
+          <Typography ><b>More Info</b></Typography>
             <ExpandMoreIcon />
           </IconButton>
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
