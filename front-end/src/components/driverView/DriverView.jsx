@@ -17,10 +17,10 @@ class DriverView extends React.Component {
     return this.props.currentUser ? (
       <Router>
         <Grid container justify="flex-start">
-          <Grid item sm={3}>
+          <Grid item sm={12}>
             <DriverBar />
           </Grid>
-          <Grid item sm={9}>
+          <Grid item sm={12}>
             <div className="grid-item">
               <Switch>
                 <Route path="/driver/home" render={props => <DriverHome {...props} currentUser={this.props.currentUser} />} />
