@@ -29,10 +29,10 @@ class CustomerHistory extends React.Component {
       <div>
         <Grid container justify="space-evenly" spacing={3}>
           {this.state.orders.length > 0 ? this.state.orders.map(order => (
-            <Grid item key={order.id} xs={5}>
+            <Grid item key={order.id} xs={9}>
               <OrderCard order={order} userType={this.props.currentUser.type} getOrders={this.getPastOrders} />
             </Grid>
-          )) : <Typography variant="h5"><i>You don't have any orders in the past...</i></Typography>}
+          )) : <Typography variant="h5">You don't have any orders in the past</Typography>}
         </Grid>
       </div>
     ) : <div />

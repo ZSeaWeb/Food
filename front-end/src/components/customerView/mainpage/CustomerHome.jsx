@@ -57,10 +57,10 @@ class CustomerHome extends React.Component {
       <div>
         <Grid container justify="center">
           <Grid item>
-            <Paper component="form" onSubmit={this.handleSearch} style={{width: 400, padding: '2px 4px', display: "spac"}} >
+            <Paper component="form" onSubmit={this.handleSearch} style={{width: 600, padding: '2px 4px', display: "spac", backgroundColor: '#f8f5f1'}} >
               <InputBase
-                style={{marginLeft: '10px', width: 325}}
-                placeholder="Search Restaurant or Food"
+                style={{marginLeft: '10px', width: 300}}
+                placeholder="What are you craving?"
                 value={this.state.searchText}
                 onChange={event => this.handleChange({searchText: event.target.value})}
               />
@@ -71,12 +71,16 @@ class CustomerHome extends React.Component {
           </Grid>
           <Grid item xs={12}>
             <div className="cardbody">
-              <Grid container justify="space-evenly" spacing={2}>
+              <Grid container justify="space-evenly" spacing={4}>
                 {this.state.restaurants && this.state.restaurants.length !== 0 ? this.state.restaurants.map(restaurant => (
-                  <Grid item xs={5} key={restaurant.id}>
+                  <Grid item xs={4} key={restaurant.id}>
                     <RestaurantCard userId={this.props.currentUser.id} restaurantId={restaurant.id} restaurantInfo={restaurant.information} />
                   </Grid>
-                )) : <Typography variant="h5"><i>No result matches your search, please try again...</i></Typography>}
+                )) :
+                    <Typography color="textSecondary">
+                      <h1>We didn't find a match for your search</h1>
+                      <h3>Please try searching for something else</h3>
+                    </Typography>}
               </Grid>
             </div>
           </Grid>

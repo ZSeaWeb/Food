@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import {
   Grid, Typography, Button
 } from '@material-ui/core';
@@ -55,16 +55,16 @@ class DisplayRestaurant extends React.Component {
   render() {
     return this.props.currentUser && this.state.restaurant ? (
       <div>
-        <Typography variant="h4">
+        <Typography variant="h4" color="textSecondary">
         <img className="littleImage" src= {this.state.restaurant.information.imageUrl} alt={this.state.restaurant.information.restaurantName} />
-        <i><b>Welcome to {this.state.restaurant.information.restaurantName}</b></i>
+        <b>Welcome to {this.state.restaurant.information.restaurantName}</b>
         </Typography>
         {!this.state.restaurant.information.open ? (
-          <Typography variant="body1" color="error">Closed, will go back soon...</Typography>
+          <Typography variant="body1" color="primary">We are temporary closed now, sorry for any inconvenience</Typography>
         ) : null}
         <br />
         <Typography variant="body1" color="textSecondary" component="p">
-          <i>{this.state.restaurant.information.description}</i>
+          {this.state.restaurant.information.description}
         </Typography>
         <br />
         <br />
@@ -79,7 +79,7 @@ class DisplayRestaurant extends React.Component {
         <div className="checkoutBox">
           <Grid container justify="flex-end">
               <Grid item>
-                <Typography variant="h5"><i>Subtotal : $ {this.state.subtotal}</i></Typography>
+                <Typography variant="h5" color="textSecondary">Subtotal : $ {this.state.subtotal}</Typography>
               </Grid>
           </Grid>
           <br />
