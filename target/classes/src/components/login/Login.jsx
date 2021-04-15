@@ -115,7 +115,9 @@ class Login extends React.Component {
               or
               <br/>
 
-              <Link to={"/register"} className="link">
+              <Link to={"/register"}
+                    // className="link"
+              >
                 <h3>Create Your Account</h3>
               </Link>
               <br/>

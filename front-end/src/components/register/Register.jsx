@@ -190,9 +190,12 @@ class Register extends React.Component {
                 Create your account
               </Button>
               <br/>
+              <br/>
               or
               <br/>
-              <Link to={"/login"} className="link">
+              <Link to={"/login"}
+                    // className="link"
+              >
                 <h3>Have an account? Sign In</h3>
               </Link>
               <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
