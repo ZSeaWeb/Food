@@ -85,6 +85,7 @@ class RestaurantCard extends React.Component {
       <IconButton
         onClick={this.handleExpandClick}
         aria-expanded={this.state.expanded}
+
       >
       <Typography><b>See Comments</b></Typography>
         <ExpandMoreIcon />

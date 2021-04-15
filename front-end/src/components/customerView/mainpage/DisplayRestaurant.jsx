@@ -63,7 +63,7 @@ class DisplayRestaurant extends React.Component {
           <Typography variant="body1" color="primary">We are temporary closed now, sorry for any inconvenience</Typography>
         ) : null}
         <br />
-        <Typography variant="body1" color="textPrimary" component="p">
+        <Typography variant="body1" color="textSecondary" component="p">
           {this.state.restaurant.information.description}
         </Typography>
         <br />
