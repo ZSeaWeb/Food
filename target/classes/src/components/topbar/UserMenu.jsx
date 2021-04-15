@@ -199,8 +199,8 @@ class UserMenu extends React.Component {
             <Button type="submit"
                 fullWidth
                 variant="contained"
-                color="secondary" 
-                onClick={this.dropAccount} 
+                color="secondary"
+                onClick={this.dropAccount}
             >
               Yes
             </Button>
@@ -343,3 +343,4 @@ class UserMenu extends React.Component {
 }
 
 export default UserMenu;
+
