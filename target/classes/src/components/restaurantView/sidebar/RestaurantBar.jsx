@@ -4,9 +4,10 @@ import {
   List,
   ListItem,
   ListItemText,
-  Divider
+  Divider, AppBar, Tabs, Tab
 }
-from '@material-ui/core';
+  from '@material-ui/core';
+import {TabPanel, TabContext} from "@material-ui/lab";
 
 class RestaurantBar extends React.Component {
   render() {
@@ -15,38 +16,25 @@ class RestaurantBar extends React.Component {
         <br />
         <h3><b><i>Restaurant ToolBar</i></b></h3>
         <br />
-        <List component="nav">
-          <Link to={"/restaurant/home"} className="link">
-            <ListItem>
-              <ListItemText primary={"Home Page"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/restaurant/information"} className="link">
-            <ListItem>
-              <ListItemText primary={"Restaurant Information"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/restaurant/menu"} className="link">
-            <ListItem>
-              <ListItemText primary={"Menu"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/restaurant/order"} className="link">
-            <ListItem>
-              <ListItemText primary={"My Active Orders"} />
-            </ListItem>
-            <Divider />
-          </Link>
-          <Link to={"/restaurant/history"} className="link">
-            <ListItem>
-              <ListItemText primary={"My Order History"} />
-            </ListItem>
-            <Divider />
-          </Link>
-        </List>
+        <AppBar position="static">
+          <Tabs value="value" onChange={() => {}} aria-label="simple tabs example" centered>
+            <Link to={"/restaurant/home"} className="link">
+              <Tab label="New Restaurant Instruction"/>
+            </Link>
+            <Link to={"/restaurant/information"} className="link">
+              <Tab label="Restaurant Information" />
+            </Link>
+            <Link to={"/restaurant/menu"} className="link">
+              <Tab label="Menu"/>
+            </Link>
+            <Link to={"/restaurant/order"} className="link">
+              <Tab label="My Active Orders"/>
+            </Link>
+            <Link to={"/restaurant/history"} className="link">
+              <Tab label="My Order History"/>
+            </Link>
+          </Tabs>
+        </AppBar>
       </div>
     );
   }

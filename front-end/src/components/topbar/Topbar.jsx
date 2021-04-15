@@ -45,7 +45,7 @@ class Topbar extends React.Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <AppBar className="topbar" position="absolute" color="secondary">
+        <AppBar className="topbar" position="absolute" >
           <Toolbar>
             {this.props.currentUser ?
             (<Grid
