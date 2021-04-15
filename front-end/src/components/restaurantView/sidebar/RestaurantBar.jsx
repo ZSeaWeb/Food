@@ -15,7 +15,7 @@ class RestaurantBar extends React.Component {
   render() {
     return (
       <div>
-        <AppBar position="static" style={{ background: '#2E3B55' }}>
+        <AppBar position="static" style={{ background: '#a2d1e8' }}>
           <Tabs value="value" onChange={() => {}} aria-label="simple tabs example" centered>
             <Link to={"/restaurant/home"} className="link">
               <Tab label="New Restaurant" icon={<HelpIcon />}/>
