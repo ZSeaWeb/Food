@@ -180,9 +180,6 @@ class Register extends React.Component {
                 </RadioGroup>
               </FormControl>
               <br/>
-              <div>
-                Lorem
-              </div>
               <br/>
               <Button
                 type="submit"

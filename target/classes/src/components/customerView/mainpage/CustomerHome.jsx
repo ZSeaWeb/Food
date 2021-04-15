@@ -57,7 +57,7 @@ class CustomerHome extends React.Component {
       <div>
         <Grid container justify="center">
           <Grid item>
-            <Paper component="form" onSubmit={this.handleSearch} style={{width: 600, padding: '2px 4px', display: "spac"}} >
+            <Paper component="form" onSubmit={this.handleSearch} style={{width: 600, padding: '2px 4px', display: "spac", backgroundColor: '#f8f5f1'}} >
               <InputBase
                 style={{marginLeft: '10px', width: 300}}
                 placeholder="What are you craving?"

@@ -27,7 +27,7 @@ class RestaurantHome extends React.Component {
   render() {
     return this.state.restaurant ? (
       <div>
-        <Typography paragraph variant="h2">Welcome to the <i><b>NEUEat</b></i> !</Typography>
+        <Typography paragraph variant="h2"><i><b>Welcome</b></i> !</Typography>
         <Typography paragraph variant="h5">Get set up for success </Typography>
         <Typography paragraph>
           Support starts on day one, with hands-on help to get your restaurant up and running in the Restaurant Information Page.
