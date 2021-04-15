@@ -49,13 +49,13 @@ class DishCard extends React.Component {
     return this.props.dish && this.props.currentUser ? (
       <Card>
         <CardHeader
-          style={{backgroundColor: "#FAFAD2", height: "30px"}}
-          titleTypographyProps={{variant:'body1'}}
+          style={{backgroundColor: "#91daf2", height: "30px"}}
+          titleTypographyProps={{variant:'body1', color:'textSecondary'}}
           title={this.props.dish.dishName}
           subheader={"$ " + this.props.dish.price}
         />
         <img className="dishCardImage" src= {this.props.dish.imageUrl} alt={this.props.dish.dishName} />
-        <CardActions style={{backgroundColor: "#e6f7ff"}}>
+        <CardActions style={{backgroundColor: "#dff0f5"}}>
           {this.props.currentUser.type !== "restaurant" ?
           <Grid container justify="center" alignItems="center">
             <IconButton disabled={this.state.number === 0} onClick={this.handleMinus}>
