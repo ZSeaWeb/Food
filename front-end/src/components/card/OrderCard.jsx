@@ -91,6 +91,7 @@ class OrderCard extends React.Component {
             this.setState({resAddress : lat + "," + lng});
           },
           error => {
+            console.log(error)
             this.setState({wrongAddress : true});
           }
         );
