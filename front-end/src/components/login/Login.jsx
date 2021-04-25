@@ -1,8 +1,8 @@
 import React from 'react';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
+
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import Box from '@material-ui/core/Box';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
@@ -12,6 +12,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import { Link } from "react-router-dom";
 import './Login.css';
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import {Tab} from "@material-ui/core";
+import HomeIcon from '@material-ui/icons/Home';
+import AdbIcon from "@material-ui/icons/Adb";
+
 const axios = require('axios').default;
 
 class Login extends React.Component {
@@ -109,16 +114,13 @@ class Login extends React.Component {
               </Button>
               <br/>
               <br/>
-              {/*<Link to={"/#"} className={"link"}>*/}
-              {/* Don't want to sign in or sign up? GUEST BROWSING MODE*/}
-              {/*</Link>*/}
-              or
-              <br/>
+              <Link to={"/home"} className={"link"}>
+                <Tab label="Home" icon={<HomeIcon/>}/>
+              </Link>
 
               <Link to={"/register"} className="link">
-                <h3>Create Your Account</h3>
+                <Tab label="Register" icon={<AdbIcon/>}/>
               </Link>
-              <br/>
               <br/>
               <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
               informational and educational purposes only and is not a substitute for professional advice.</h4>

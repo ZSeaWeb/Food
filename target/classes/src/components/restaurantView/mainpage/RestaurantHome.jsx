@@ -28,10 +28,13 @@ class RestaurantHome extends React.Component {
     return this.state.restaurant ? (
       <div>
         <Typography paragraph variant="h2">Welcome to the <i><b>NEUEat</b></i> !</Typography>
-        <Typography paragraph>For new users, please provide your restaurant information and menu using the links in Restaurant Info Session</Typography>
-        {/*<Typography paragraph>Once you finish them, your restaurant will be visible to the customers</Typography>*/}
+        <Typography paragraph variant="h5">Get set up for success </Typography>
+        <Typography paragraph>
+          Support starts on day one, with hands-on help to get your restaurant up and running in the Restaurant Information Page.
+          </Typography>
+        <Typography paragraph>From creating your menu to adjusting your hours, here's what to expect when getting set up, please click the links of Menu.</Typography>
         {/*<Typography paragraph>To be noticed, you can always update them</Typography>*/}
-        <Typography paragraph>Enjoy!</Typography>
+        <Typography paragraph>Thanks for being our partners!</Typography>
         <Divider />
         <br />
         <div>Restaurant Information status : 
