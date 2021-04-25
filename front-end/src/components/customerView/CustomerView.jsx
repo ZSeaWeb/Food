@@ -9,6 +9,7 @@ import DisplayRestaurant from "./mainpage/DisplayRestaurant";
 import ShopCart from "./mainpage/ShopCart";
 import CustomerOrder from "./mainpage/CustomerOrder";
 import CustomerHistory from "./mainpage/CustomerHistory";
+import CustomerProfile from "./mainpage/CustomerProfile";
 
 class CustomerView extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class CustomerView extends React.Component {
             <div className="grid-item">
               <Switch>
                 <Route path="/customer/home" render={props => <CustomerHome {...props} currentUser={this.props.currentUser} />} />
+                <Route path="/customer/profile" render={props => <CustomerProfile {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/cart" render={props => <ShopCart {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/orders" render={props => <CustomerOrder {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/history" render={props => <CustomerHistory {...props} currentUser={this.props.currentUser} />} />
