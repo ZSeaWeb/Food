@@ -100,7 +100,6 @@ class Main extends React.Component {
                     <Route path="/home" render={props => <HomePage />} />
                 )
 
-
                 !this.state.userType && (
                   <Route path="/restaurants/:id" render={props => <RestaurantInfoGeneral />} />
                 )
