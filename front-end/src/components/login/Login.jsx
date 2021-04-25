@@ -1,8 +1,8 @@
 import React from 'react';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
+
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import Box from '@material-ui/core/Box';
+
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
@@ -109,16 +109,13 @@ class Login extends React.Component {
               </Button>
               <br/>
               <br/>
-              {/*<Link to={"/#"} className={"link"}>*/}
-              {/* Don't want to sign in or sign up? GUEST BROWSING MODE*/}
-              {/*</Link>*/}
-              or
+              <Link to={"/home"} className={"link"}>
+               Go Back to Home
+              </Link>
               <br/>
-
               <Link to={"/register"} className="link">
                 <h3>Create Your Account</h3>
               </Link>
-              <br/>
               <br/>
               <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
               informational and educational purposes only and is not a substitute for professional advice.</h4>

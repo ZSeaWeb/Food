@@ -10,6 +10,8 @@ import {
   Grid
 } from '@material-ui/core';
 import './Main.css';
+import HomePage from "./HomePage";
+import RestaurantInfoGeneral from "./RestaurantInfoGeneral";
 const axios = require('axios').default;
 
 class Main extends React.Component {
@@ -69,12 +71,14 @@ class Main extends React.Component {
                 {this.state.userType && this.state.userType === "customer" ? (
                   <Route path="/customer" render={props => <CustomerView {...props} currentUser={this.state.currentUser} changeView={this.changeView} />} />
                 ) : (
+
                   <Redirect path="/customer" to="/login" />
                 )}
                 {this.state.userType && this.state.userType === "driver" ? (
                   <Route path="/driver" render={props => <DriverView {...props} currentUser={this.state.currentUser} changeView={this.changeView} />} />
                 ) : (
-                  <Redirect path="/driver" to="/login" />
+
+                    <Redirect path="/driver" to="/login" />
                 )}
                 {this.state.userType && this.state.userType === "restaurant" ? (
                   <Route path="/restaurant" render={props => <RestaurantView {...props} currentUser={this.state.currentUser} changeView={this.changeView} />} />
@@ -91,7 +95,18 @@ class Main extends React.Component {
                 ) : (
                   <Redirect path="/register" to={"/" + this.state.userType} />
                 )}
+
+                !this.state.userType && (
+                    <Route path="/home" render={props => <HomePage />} />
+                )
+
+
+                !this.state.userType && (
+                  <Route path="/restaurants/:id" render={props => <RestaurantInfoGeneral />} />
+                )
+
                 <Redirect path="/" to={"/login"} />
+
               </Switch>
             </div>
           </Grid>
