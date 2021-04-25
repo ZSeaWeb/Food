@@ -9,6 +9,7 @@ import RestaurantHome from "./mainpage/RestaurantHome";
 import RestaurantHistory from "./mainpage/RestaurantHistory";
 import RestaurantInfo from "./mainpage/RestaurantInfo";
 import RestaurantMenu from "./mainpage/RestaurantMenu";
+import RestaurantProfile from "./mainpage/RestaurantProfile";
 
 class RestaurantView extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class RestaurantView extends React.Component {
               <Switch>
                 <Route path="/restaurant/home" render={props => <RestaurantHome {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/restaurant/information" render={props => <RestaurantInfo {...props} currentUser={this.props.currentUser} />} />
+                <Route path="/restaurant/profile" render={props => <RestaurantProfile {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/restaurant/menu" render={props => <RestaurantMenu {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/restaurant/order" render={props => <RestaurantOrder {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/restaurant/history" render={props => <RestaurantHistory {...props} currentUser={this.props.currentUser} />} />
