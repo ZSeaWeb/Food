@@ -1,0 +1,21 @@
+.text-part {
+  background-color: #f6e6e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-image {
+  height: 50%;
+  width: 50%;
+}
+
+.image-part {
+  padding: 20px;
+  background-color: #c1a1d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
