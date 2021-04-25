@@ -31,7 +31,7 @@ class CustomerView extends React.Component {
                 <Route path="/customer/cart" render={props => <ShopCart {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/orders" render={props => <CustomerOrder {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/history" render={props => <CustomerHistory {...props} currentUser={this.props.currentUser} />} />
-                <Route path="/customer/restaurant/:restaurantId" render={props => <DisplayRestaurant {...props} currentUser={this.props.currentUser} />} />
+                <Route path="/customer/restaurant/profile/:restaurantId" render={props => <DisplayRestaurant {...props} currentUser={this.props.currentUser} />} />
                 <Redirect path="/customer" to="/customer/home" />
               </Switch>
             </div>
