@@ -15,16 +15,13 @@ class CustomerBar extends React.Component {
   render() {
     return (
         <div>
-          {/*<br />*/}
-          {/*<h3><b>ToolBar</b></h3>*/}
-          {/*<br />*/}
           <AppBar position="static" style={{ background: '#a2d1e8' }}>
             <Tabs value="value" onChange={() => {}} aria-label="simple tabs example" centered>
               <Link to={"/customer/home"} className="link" color="secondary">
                 <Tab label="Home Page" icon={<HomeIcon/>}/>
               </Link>
               <Link to={"/customer/profile"} className="link">
-                <Tab label="Customer Profile" icon={<PermContactCalendarIcon/>}/>
+                <Tab label="My Profile" icon={<PermContactCalendarIcon/>}/>
               </Link>
               <Link to={"/customer/cart"} className="link">
                   <Tab label="My Shopping Cart" icon={<LocalGroceryStoreIcon/>}/>
