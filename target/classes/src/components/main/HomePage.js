@@ -27,8 +27,8 @@ const HomePage = () => {
         fetch("http://localhost:8080/api/restaurant/all")
             .then(response => response.json())
             .then((response) => {
+                console.log(response)
                 setRestaurants(response)
-                console.log(restaurants)
             })
     }, [])
 
@@ -55,9 +55,23 @@ const HomePage = () => {
             </div>
 
             <div className="container">
-                <div className="text-part">
-                    <h2>There are {restaurants.length} restaurants in our website!</h2>
+
+                <h2>There are {restaurants.length} restaurants in our website!</h2>
+
+                <div >
+                    {
+                        restaurants.map(restaurant =>
+                            <div>
+                                <Link to={`/restaurants/${restaurant.id}`}>
+                                    <h4>
+                                        {restaurant.information.restaurantName}
+                                    </h4>
+                                </Link>
+                            </div>
+                        )
+                    }
                 </div>
+
                 <div className="text-part">
                     <h2>The most popular restaurant in the past 24 hours is ...</h2>
                 </div>

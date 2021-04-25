@@ -13,15 +13,6 @@ import AdbIcon from '@material-ui/icons/Adb';
 
 const HomePage = () => {
     const [restaurants, setRestaurants] = useState([])
-    // useEffect(()=> {
-    //     // fetch("/api/restaurant/all").then(
-    //     //     restaurants => {
-    //     //         //let temp = response.data.filter(restaurant => restaurant.information != null && restaurant.menu != null);
-    //     //         //this.setState({searchText: "", restaurants: temp});
-    //     //         setRestaurants(restaurants)
-    //     //     }
-    //     // ).catch(err => console.log(err));
-    // })
 
     useEffect(() => {
         fetch("http://localhost:8080/api/restaurant/all")
@@ -72,20 +63,16 @@ const HomePage = () => {
                     }
                 </div>
 
-                <div className="text-part">
-                    <h2>The most popular restaurant in the past 24 hours is ...</h2>
-                </div>
                 <div>
                     <AppBar position="static" style={{background: '#f6e6e4'}}>
                         <Tabs value="value" onChange={() => {
                         }} aria-label="simple tabs example" centered>
                             <Link to={"/login"} className="link" color="secondary">
-                                <Tab label="Login" icon={<AccountBoxIcon/>}/>
+                                <Tab label="Login/Register" icon={<AccountBoxIcon/>}/>
                             </Link>
-
-                            <Link to={"/register"} className="link" color="secondary">
-                                <Tab label="Register" icon={<AdbIcon/>}/>
-                            </Link>
+                            {/*<Link to={"/register"} className="link" color="secondary">*/}
+                            {/*    <Tab label="Register" icon={<AdbIcon/>}/>*/}
+                            {/*</Link>*/}
                         </Tabs>
                     </AppBar>
                 </div>

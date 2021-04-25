@@ -9,7 +9,7 @@ import DisplayRestaurant from "./mainpage/DisplayRestaurant";
 import ShopCart from "./mainpage/ShopCart";
 import CustomerOrder from "./mainpage/CustomerOrder";
 import CustomerHistory from "./mainpage/CustomerHistory";
-
+import HomePage from "../main/HomePage";
 class CustomerView extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +30,9 @@ class CustomerView extends React.Component {
                 <Route path="/customer/orders" render={props => <CustomerOrder {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/history" render={props => <CustomerHistory {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/restaurant/:restaurantId" render={props => <DisplayRestaurant {...props} currentUser={this.props.currentUser} />} />
+                {/*<Route path="/customer/homepage" render ={props => <HomePage />} />*/}
                 <Redirect path="/customer" to="/customer/home" />
+
               </Switch>
             </div>
           </Grid>

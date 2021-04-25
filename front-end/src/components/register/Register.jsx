@@ -69,7 +69,7 @@ class Register extends React.Component {
           }
       ).catch(err => {
               console.log(err);
-              this.setState({registerFailed: err.response.data});   
+              this.setState({registerFailed: err.response.data});
           }
       );
     }

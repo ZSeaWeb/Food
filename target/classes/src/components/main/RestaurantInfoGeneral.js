@@ -49,7 +49,7 @@ const RestaurantInfoGeneral = () => {
                 <Tab label="Register" icon={<AdbIcon/>}/>
             </Link>
 
-            <Link to={"/home"} className={"link"}>
+            <Link to={"/"} className={"link"}>
                 <Tab label="Home" icon={<HomeIcon/>}/>
             </Link>
         </div>
