@@ -27,6 +27,11 @@ class RestaurantHome extends React.Component {
   render() {
     return this.state.restaurant ? (
       <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <Typography paragraph variant="h2">Welcome to the <i><b>NEUEat</b></i> !</Typography>
         <Typography paragraph variant="h5">Get set up for success </Typography>
         <Typography paragraph>
@@ -37,13 +42,13 @@ class RestaurantHome extends React.Component {
         <Typography paragraph>Thanks for being our partners!</Typography>
         <Divider />
         <br />
-        <div>Restaurant Information status : 
-        {this.state.restaurant.information !== null ? <Typography color="primary">verified</Typography> : <Typography color="error">empty</Typography>}
-        </div>
-        <br />
-        <div>Menu status : 
-        {this.state.restaurant.menu && this.state.restaurant.menu.length !== 0 ? <Typography color="primary">verified</Typography> : <Typography color="error">empty</Typography>}
-        </div>
+        {/*<div>Restaurant Information status :*/}
+        {/*{this.state.restaurant.information !== null ? <Typography color="primary">verified</Typography> : <Typography color="error">empty</Typography>}*/}
+        {/*</div>*/}
+        {/*<br />*/}
+        {/*<div>Menu status :*/}
+        {/*{this.state.restaurant.menu && this.state.restaurant.menu.length !== 0 ? <Typography color="primary">verified</Typography> : <Typography color="error">empty</Typography>}*/}
+        {/*</div>*/}
       </div>
     ) : <div />;
   }

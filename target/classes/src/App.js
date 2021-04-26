@@ -15,7 +15,7 @@ function App() {
           </div>
         </Route>
 
-          <Route path="/login#/home" exact={true}>
+          <Route path="/home" exact={true}>
               <div className={"App"}>
                   <HomePage></HomePage>
               </div>

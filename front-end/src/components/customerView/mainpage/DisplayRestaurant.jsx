@@ -63,8 +63,16 @@ class DisplayRestaurant extends React.Component {
           <Typography variant="body1" color="primary">We are temporary closed now, sorry for any inconvenience</Typography>
         ) : null}
         <br />
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="h6" color="textSecondary" component="p">
           {this.state.restaurant.information.description}
+        </Typography>
+        <br />
+        <br />
+        <Typography color="textSecondary"  component="p">
+          Phone number: {this.state.restaurant.phoneNumber}
+        </Typography>
+        <Typography color="textSecondary"  component="p">
+          Address: {this.state.restaurant.address}, {this.state.restaurant.city}, {this.state.restaurant.state}, {this.state.restaurant.zip}
         </Typography>
         <br />
         <br />

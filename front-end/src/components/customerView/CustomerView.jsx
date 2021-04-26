@@ -9,7 +9,8 @@ import DisplayRestaurant from "./mainpage/DisplayRestaurant";
 import ShopCart from "./mainpage/ShopCart";
 import CustomerOrder from "./mainpage/CustomerOrder";
 import CustomerHistory from "./mainpage/CustomerHistory";
-import HomePage from "../main/HomePage";
+import CustomerProfile from "./mainpage/CustomerProfile";
+
 class CustomerView extends React.Component {
   constructor(props) {
     super(props);
@@ -26,13 +27,14 @@ class CustomerView extends React.Component {
             <div className="grid-item">
               <Switch>
                 <Route path="/customer/home" render={props => <CustomerHome {...props} currentUser={this.props.currentUser} />} />
+                <Route path="/customer/profile" render={props => <CustomerProfile {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/cart" render={props => <ShopCart {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/orders" render={props => <CustomerOrder {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/history" render={props => <CustomerHistory {...props} currentUser={this.props.currentUser} />} />
+                <Route path="/customer/restaurant/profile/:restaurantId" render={props => <DisplayRestaurant {...props} currentUser={this.props.currentUser} />} />
                 <Route path="/customer/restaurant/:restaurantId" render={props => <DisplayRestaurant {...props} currentUser={this.props.currentUser} />} />
-                {/*<Route path="/customer/homepage" render ={props => <HomePage />} />*/}
-                <Redirect path="/customer" to="/customer/home" />
 
+                <Redirect path="/customer" to="/customer/home" />
               </Switch>
             </div>
           </Grid>

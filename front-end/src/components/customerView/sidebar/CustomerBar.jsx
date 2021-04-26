@@ -10,18 +10,18 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import HomeIcon from '@material-ui/icons/Home';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
-
+import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 class CustomerBar extends React.Component {
   render() {
     return (
         <div>
-          {/*<br />*/}
-          {/*<h3><b>ToolBar</b></h3>*/}
-          {/*<br />*/}
           <AppBar position="static" style={{ background: '#a2d1e8' }}>
             <Tabs value="value" onChange={() => {}} aria-label="simple tabs example" centered>
               <Link to={"/customer/home"} className="link" color="secondary">
                 <Tab label="Home Page" icon={<HomeIcon/>}/>
+              </Link>
+              <Link to={"/customer/profile"} className="link">
+                <Tab label="My Profile" icon={<PermContactCalendarIcon/>}/>
               </Link>
               <Link to={"/customer/cart"} className="link">
                   <Tab label="My Shopping Cart" icon={<LocalGroceryStoreIcon/>}/>

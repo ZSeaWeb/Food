@@ -11,7 +11,9 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import { Link } from "react-router-dom";
-import {Divider} from "@material-ui/core";
+import {Divider, Tab} from "@material-ui/core";
+import HomeIcon from "@material-ui/icons/Home";
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
 const axios = require('axios').default;
 
 class Register extends React.Component {
@@ -193,12 +195,10 @@ class Register extends React.Component {
               <Divider></Divider>
               <br/>
               <Link to={"/home"} className={"link"}>
-                Don't want to sign in or sign up? GUEST BROWSING MODE
+                <Tab label="Home" icon={<HomeIcon/>}/>
               </Link>
-              <br/>
-
               <Link to={"/login"} className="link">
-                <h3>Have an account? Sign In</h3>
+                <Tab label="Login" icon={<AccountBoxIcon/>}/>
               </Link>
               <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general
                 informational and educational purposes only and is not a substitute for professional advice.</h4>

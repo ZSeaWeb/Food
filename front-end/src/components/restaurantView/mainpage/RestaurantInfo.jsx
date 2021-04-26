@@ -77,7 +77,6 @@ class RestaurantInfo extends React.Component {
       <Grid container justify="center">
         <Grid item xs={5}>
           <div className="container">
-            <FastfoodIcon className="icon"/>
             <Typography component="h1" variant="h5">
               Provide Your Restaurant Detail
             </Typography>
@@ -162,6 +161,7 @@ class RestaurantInfo extends React.Component {
                 Update
               </Button>
             </form>
+
           </div>
         </Grid>
       </Grid>

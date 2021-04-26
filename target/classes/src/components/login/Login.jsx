@@ -12,6 +12,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import { Link } from "react-router-dom";
 import './Login.css';
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import {Tab} from "@material-ui/core";
+import HomeIcon from '@material-ui/icons/Home';
+import AdbIcon from "@material-ui/icons/Adb";
+
 const axios = require('axios').default;
 
 class Login extends React.Component {
@@ -110,11 +115,11 @@ class Login extends React.Component {
               <br/>
               <br/>
               <Link to={"/home"} className={"link"}>
-               Go Back to Home
+                <Tab label="Home" icon={<HomeIcon/>}/>
               </Link>
-              <br/>
+
               <Link to={"/register"} className="link">
-                <h3>Create Your Account</h3>
+                <Tab label="Register" icon={<AdbIcon/>}/>
               </Link>
               <br/>
               <h4>Disclaimer: The Site cannot and does not contain any advice. The information is provided for general

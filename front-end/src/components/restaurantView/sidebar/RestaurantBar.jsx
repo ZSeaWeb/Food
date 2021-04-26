@@ -10,6 +10,7 @@ import HelpIcon from '@material-ui/icons/Help';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import AddAlarmIcon from '@material-ui/icons/AddAlarm';
 import RestaurantIcon from '@material-ui/icons/Restaurant';
+import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 
 class RestaurantBar extends React.Component {
   render() {
@@ -20,8 +21,11 @@ class RestaurantBar extends React.Component {
             <Link to={"/restaurant/home"} className="link">
               <Tab label="New Restaurant" icon={<HelpIcon />}/>
             </Link>
+            <Link to={"/restaurant/profile"} className="link">
+              <Tab label="Restaurant profile" icon={<RestaurantIcon />}/>
+            </Link>
             <Link to={"/restaurant/information"} className="link">
-              <Tab label="Restaurant Information" icon={<RestaurantIcon />}/>
+              <Tab label="Update My Profile" icon={<AddToQueueIcon />}/>
             </Link>
             <Link to={"/restaurant/menu"} className="link">
               <Tab label="Menu" icon={<MenuBookIcon />}/>

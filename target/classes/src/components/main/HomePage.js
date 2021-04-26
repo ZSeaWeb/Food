@@ -47,7 +47,7 @@ const HomePage = () => {
 
             <div className="container">
 
-                <h2>There are {restaurants.length} restaurants in our website!</h2>
+                <h2>Check Top {restaurants.length} restaurants in our website!</h2>
 
                 <div >
                     {
@@ -70,9 +70,6 @@ const HomePage = () => {
                             <Link to={"/login"} className="link" color="secondary">
                                 <Tab label="Login/Register" icon={<AccountBoxIcon/>}/>
                             </Link>
-                            {/*<Link to={"/register"} className="link" color="secondary">*/}
-                            {/*    <Tab label="Register" icon={<AdbIcon/>}/>*/}
-                            {/*</Link>*/}
                         </Tabs>
                     </AppBar>
                 </div>
