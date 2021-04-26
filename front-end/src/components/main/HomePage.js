@@ -15,7 +15,7 @@ const HomePage = () => {
     const [restaurants, setRestaurants] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/restaurant/all")
+        fetch("https://yummyeat.herokuapp.com/api/restaurant/all")
             .then(response => response.json())
             .then((response) => {
                 console.log(response)
