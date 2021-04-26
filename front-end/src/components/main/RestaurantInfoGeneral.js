@@ -9,7 +9,7 @@ const RestaurantInfoGeneral = () => {
     const {id} = useParams();
     const [menu, setMenu] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:8080/api/restaurant/menu/${id}`)
+        fetch(`https://yummyeat.herokuapp.com/api/restaurant/menu/${id}`)
              .then(response => response.json())
             .then((response) => {
                 setMenu(response)
@@ -58,4 +58,3 @@ const RestaurantInfoGeneral = () => {
 }
 
 export default RestaurantInfoGeneral
-
